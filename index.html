@@ -3,189 +3,187 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Salads & Wings Acapulco | Sports Bar</title>
-  <meta name="description" content="Salads & Wings Acapulco: alitas, burgers, tacos y ambiente sports bar. Menú, ubicación y pedidos por WhatsApp." />
-  <meta name="keywords" content="Salads y Wings Acapulco, alitas Acapulco, sports bar Costa Azul" />
-  <meta property="og:title" content="Salads & Wings Acapulco" />
-  <meta property="og:description" content="Sports bar de alto nivel en Acapulco: sabor, barra, chelas y partidos." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1400&q=80" />
+  <title>Salads & Wings Acapulco | Fútbol, tarro y alitas</title>
+  <meta name="description" content="Salads & Wings Acapulco: fútbol en vivo, tarros fríos, alitas y barra. Varias sucursales, menú y pedidos por WhatsApp." />
   <meta name="theme-color" content="#0d2f8b" />
   <style>
     :root{
       --blue:#0d2f8b;
-      --blue-2:#1644be;
-      --red:#d5172e;
-      --red-2:#ff2c44;
-      --ink:#111318;
-      --paper:#f5f7fc;
-      --white:#fff;
-      --line:#c9d3ea;
-      --radius:14px;
-      --max:1200px;
+      --blue2:#1747c7;
+      --red:#d6172f;
+      --red2:#ff334b;
+      --dark:#0c0f17;
+      --dark2:#12192a;
+      --ink:#e8ecf7;
+      --muted:#a8b3cc;
+      --card:#101726;
+      --line:#273654;
+      --max:1240px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{font-family:Inter,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
-    .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+    html,body{margin:0;padding:0;background:var(--dark);color:var(--ink);font-family:Inter,Arial,sans-serif}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
 
     .hero{
-      min-height:82vh;
-      color:#fff;
+      min-height:86vh;
       display:flex;align-items:flex-end;
       background:
-        linear-gradient(120deg,rgba(8,18,46,.88),rgba(8,18,46,.45) 56%,rgba(213,23,46,.3)),
-        url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2200&q=80') center/cover no-repeat;
-      border-bottom:5px solid var(--red);
+        linear-gradient(120deg,rgba(8,14,30,.92),rgba(8,14,30,.45) 52%, rgba(214,23,47,.28)),
+        url('https://images.unsplash.com/photo-1518091043644-c1d4457512c6?auto=format&fit=crop&w=2200&q=80') center/cover no-repeat;
+      border-bottom:4px solid var(--red);
     }
-    .hero-inner{padding:72px 0 58px}
-    .kicker{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.09em;font-weight:800;font-size:.78rem;color:#ffdbe0}
-    .kicker:before{content:"";width:48px;height:3px;background:var(--red-2)}
-    h1{margin:14px 0 10px;font-size:clamp(2.2rem,6vw,5rem);line-height:.95;text-transform:uppercase;font-weight:900;max-width:900px}
-    h1 span{color:#ff8d9b}
-    .hero p{max-width:720px;margin:0;color:#e3e9ff;font-size:1.04rem}
-    .cta{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;text-decoration:none;font-weight:800;border-radius:999px;border:2px solid transparent;transition:.2s}
-    .btn-main{background:linear-gradient(90deg,var(--red),var(--red-2));border-color:var(--red);color:#fff}
+    .hero-inner{padding:78px 0 62px}
+    .topline{display:inline-block;border:1px solid rgba(255,255,255,.35);padding:7px 12px;border-radius:999px;font-size:.75rem;letter-spacing:.09em;text-transform:uppercase;font-weight:800;color:#dfe7ff}
+    h1{margin:16px 0 10px;max-width:980px;font-size:clamp(2.3rem,6vw,5.2rem);line-height:.92;text-transform:uppercase;font-weight:900}
+    h1 span{color:#ff9cad}
+    .hero p{max-width:720px;color:#d9e2ff;margin:0;font-size:1.06rem}
+    .actions{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;text-decoration:none;font-weight:800;border-radius:999px;border:2px solid transparent;transition:.2s}
+    .btn-main{background:linear-gradient(90deg,var(--red),var(--red2));border-color:var(--red);color:#fff}
     .btn-main:hover{filter:brightness(.95)}
-    .btn-alt{border-color:rgba(255,255,255,.5);color:#fff}
-    .btn-alt:hover{background:rgba(255,255,255,.08)}
+    .btn-alt{border-color:rgba(255,255,255,.55);color:#fff}
 
-    .bar{background:#0b1636;color:#fff;border-top:1px solid #253a72;border-bottom:1px solid #253a72}
-    .bar-grid{display:grid;grid-template-columns:repeat(4,1fr)}
-    .bar-item{padding:14px 10px;text-align:center;border-right:1px solid #253a72;font-weight:700;font-size:.9rem}
-    .bar-item:last-child{border-right:0}
+    .stats{margin-top:-26px;position:relative;z-index:2}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    .stat{background:#0f1626;border:1px solid var(--line);padding:14px;border-radius:12px}
+    .stat b{display:block;color:#ff9cad;font-size:1.15rem}
+    .stat span{font-size:.85rem;color:#aeb9d5}
 
-    section{padding:54px 0}
-    .title{margin:0 0 8px;font-size:2rem;text-transform:uppercase;letter-spacing:.02em}
-    .title .a{color:var(--red)}
-    .sub{margin:0 0 18px;color:#56607a}
+    section{padding:56px 0}
+    .title{margin:0 0 8px;font-size:2rem;letter-spacing:.02em;text-transform:uppercase}
+    .title .a{color:#ff8ea1}
+    .sub{margin:0 0 18px;color:var(--muted)}
 
-    .menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:14px}
-    .item{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 20px rgba(9,23,58,.08)}
-    .item img{width:100%;height:160px;object-fit:cover;display:block}
+    .game-banner{
+      background:linear-gradient(90deg,#0f1627,#17284a 45%,#2a1730);
+      border:1px solid var(--line);
+      border-left:4px solid var(--red);
+      border-radius:12px;
+      padding:14px 16px;
+      font-weight:700;
+      color:#eaf0ff;
+      margin-bottom:14px;
+    }
+
+    .menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:14px}
+    .item{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+    .item img{width:100%;height:165px;object-fit:cover;display:block}
     .item-b{padding:12px}
     .item h3{margin:0 0 4px;text-transform:uppercase;font-size:1rem}
-    .price{font-weight:900;color:var(--red)}
-    .item p{margin:6px 0 0;color:#5a657f;font-size:.92rem}
+    .item .tag{display:inline-block;background:#1a2742;border:1px solid #324b7d;color:#c8d5f9;border-radius:999px;padding:4px 8px;font-size:.75rem;font-weight:700}
+    .item p{margin:8px 0 0;color:#b8c4df;font-size:.92rem}
 
-    .experience{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .panel{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+    .layout{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .panel{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
     .panel ul{margin:8px 0 0;padding-left:18px}
-    .panel li{margin:8px 0}
+    .panel li{margin:8px 0;color:#cad5ee}
 
-    .order{background:#111b36;color:#fff;border:1px solid #2f477c;border-radius:var(--radius);padding:20px;position:relative;overflow:hidden}
-    .order:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 90% 10%, rgba(213,23,46,.35), transparent 40%);pointer-events:none}
-    .order h3{margin:0 0 8px;text-transform:uppercase;font-size:1.45rem;position:relative}
-    .order p{margin:0 0 14px;color:#dde6ff;position:relative}
-    .form{display:grid;gap:10px;position:relative}
-    .form input,.form textarea{width:100%;padding:11px;border:1px solid #3a4f82;background:#0f1830;color:#fff;border-radius:11px}
-    .form button{padding:12px;border:0;background:linear-gradient(90deg,var(--red),var(--red-2));color:#fff;font-weight:800;border-radius:11px;cursor:pointer}
-    #formStatus{font-size:.9rem;color:#ff9caa}
+    .branches{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+    .branch{background:#0e1422;border:1px solid #2a395a;border-radius:10px;padding:12px}
+    .branch h4{margin:0 0 6px;color:#ff9cad;text-transform:uppercase;font-size:.9rem}
+    .branch p{margin:0;color:#c6d2ec;font-size:.9rem}
 
-    .location{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .map-wrap{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+    .order{background:linear-gradient(160deg,#111a2e,#0e1423);border:1px solid #2b3d63;border-radius:14px;padding:18px}
+    .order h3{margin:0 0 8px;text-transform:uppercase}
+    .order p{margin:0 0 12px;color:#d2dcf5}
+    .form{display:grid;gap:10px}
+    .form input,.form textarea{width:100%;padding:11px;border-radius:10px;border:1px solid #30466f;background:#0d1322;color:#fff}
+    .form button{padding:12px;border:0;border-radius:10px;background:linear-gradient(90deg,var(--red),var(--red2));color:#fff;font-weight:800;cursor:pointer}
+    #formStatus{font-size:.88rem;color:#ffb4c0}
+
+    .map-wrap{margin-top:14px;border:1px solid var(--line);border-radius:14px;overflow:hidden}
     iframe{width:100%;height:320px;border:0}
-    .badge{display:inline-block;background:#0b1636;color:#fff;border:1px solid #223a70;border-radius:999px;padding:6px 10px;font-size:.78rem;font-weight:800;margin-top:8px}
 
-    footer{background:#0c1224;color:#9aa5c4;text-align:center;padding:22px 0 30px;font-size:.9rem;margin-top:24px}
+    footer{padding:22px 0 30px;text-align:center;color:#8e9ab8;background:#0a0d15;margin-top:24px;font-size:.9rem}
 
     @media (max-width:980px){
-      .bar-grid{grid-template-columns:repeat(2,1fr)}
-      .bar-item:nth-child(2){border-right:0}.bar-item:nth-child(-n+2){border-bottom:1px solid #253a72}
-      .experience,.location{grid-template-columns:1fr}
+      .stats-grid{grid-template-columns:repeat(2,1fr)}
+      .layout,.branches{grid-template-columns:1fr}
     }
   </style>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Restaurant",
-    "name":"Salads & Wings Terraza",
-    "servesCuisine":"Alitas, Sports Bar, Americana",
-    "address":{"@type":"PostalAddress","streetAddress":"Av. Costera Miguel Alemán 3124, Plaza Pabellón Costera","addressLocality":"Acapulco de Juárez","addressRegion":"Guerrero","postalCode":"39850","addressCountry":"MX"},
-    "telephone":"+52 744 159 8378"
-  }
-  </script>
 </head>
 <body>
   <header class="hero">
     <div class="wrap hero-inner">
-      <div class="kicker">Salads & Wings · Costa Azul</div>
-      <h1>Sports bar con <span>hambre de juego</span></h1>
-      <p>Alitas, tacos, burgers, chelas frías y pantalla encendida. El spot para comer bien, ver el partido y quedarte más tiempo del que pensabas.</p>
-      <div class="cta">
+      <div class="topline">Salads & Wings · Acapulco</div>
+      <h1>Fútbol, tarro y <span>alitas cabronas</span></h1>
+      <p>El spot para ver el partido como se debe: barra encendida, comida potente y ambiente de banda. Llegas por una, te quedas por todo.</p>
+      <div class="actions">
         <a class="btn btn-main" href="https://wa.me/527441598378" target="_blank" rel="noopener">Pedir por WhatsApp</a>
         <a class="btn btn-alt" href="#menu">Ver menú</a>
       </div>
     </div>
   </header>
 
-  <div class="bar">
-    <div class="wrap bar-grid">
-      <div class="bar-item">Wings & Boneless</div>
-      <div class="bar-item">Barra y cerveza</div>
-      <div class="bar-item">Partidos en vivo</div>
-      <div class="bar-item">Ambiente Costa Azul</div>
+  <div class="stats">
+    <div class="wrap stats-grid">
+      <div class="stat"><b>Wings</b><span>Salsas para todos los niveles</span></div>
+      <div class="stat"><b>Sports Bar</b><span>Partidos en vivo</span></div>
+      <div class="stat"><b>Barra</b><span>Tarros y chelas frías</span></div>
+      <div class="stat"><b>Acapulco</b><span>Varias sucursales</span></div>
     </div>
   </div>
 
   <main>
     <section id="menu">
       <div class="wrap">
-        <h2 class="title">Menú <span class="a">destacado</span></h2>
-        <p class="sub">Sabor intenso, porciones de batalla y combos para compartir.</p>
-        <div class="menu">
-          <article class="item"><img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=900&q=80" alt="Alitas"><div class="item-b"><h3>Alitas Mango Habanero</h3><div class="price">Top seller</div><p>Alitas crujientes con salsa picante-dulce de la casa.</p></div></article>
-          <article class="item"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80" alt="Hamburguesa"><div class="item-b"><h3>Hamburguesa S&W</h3><div class="price">Especialidad</div><p>Carne a la parrilla, queso y papas para juego largo.</p></div></article>
-          <article class="item"><img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=900&q=80" alt="Tacos"><div class="item-b"><h3>Tacos Gobernador</h3><div class="price">Favorito local</div><p>Camarón, queso y sabor de costa en cada mordida.</p></div></article>
-          <article class="item"><img src="https://images.unsplash.com/photo-1514361892635-6a8f5b8f4c7b?auto=format&fit=crop&w=900&q=80" alt="Cerveza y barra"><div class="item-b"><h3>Barra & Beer</h3><div class="price">Mood sports bar</div><p>Cervezas frías y ambiente para ver el partido completo.</p></div></article>
+        <h2 class="title">Menú para <span class="a">día de partido</span></h2>
+        <p class="sub">Entrada fuerte, plato principal y ronda de barra: aquí se viene a comer bien.</p>
+        <div class="game-banner">Modo game day activado: wings, burgers, tacos y cervezas para aguantar los 90 minutos y el alargue.</div>
+        <div class="menu-grid">
+          <article class="item"><img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=900&q=80" alt="Alitas"><div class="item-b"><h3>Alitas Mango Habanero</h3><span class="tag">Top seller</span><p>Alitas crujientes con salsa picosa-dulce de la casa.</p></div></article>
+          <article class="item"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80" alt="Hamburguesa"><div class="item-b"><h3>Hamburguesa S&W</h3><span class="tag">Power plate</span><p>Carne a la parrilla con papas para hambre real.</p></div></article>
+          <article class="item"><img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=900&q=80" alt="Tacos"><div class="item-b"><h3>Tacos Gobernador</h3><span class="tag">Favorito</span><p>Camarón, queso y sabor de costa en cada bocado.</p></div></article>
+          <article class="item"><img src="https://images.unsplash.com/photo-1514361892635-6a8f5b8f4c7b?auto=format&fit=crop&w=900&q=80" alt="Barra"><div class="item-b"><h3>Barra & Beer</h3><span class="tag">Sports mood</span><p>Chelas frías para cada jugada del partido.</p></div></article>
         </div>
       </div>
     </section>
 
     <section>
-      <div class="wrap experience">
+      <div class="wrap layout">
         <article class="panel">
-          <h2 class="title">La vibra del <span class="a">lugar</span></h2>
-          <p>Salads & Wings combina cocina casual potente con atmósfera de sports bar real: pantallas, barra activa y mesas para compartir cada jugada.</p>
+          <h2 class="title">Ambiente <span class="a">duro</span> de sports bar</h2>
+          <p style="color:#cdd8ef">Salads & Wings está hecho para banda que quiere comer cabrón y ver fútbol con buen ambiente.</p>
           <ul>
-            <li>Ideal para ver partidos con buena comida y mejor ambiente.</li>
-            <li>Carta enfocada en alitas, entradas, tacos, burgers y ensaladas.</li>
-            <li>Experiencia social, directa y con alta recompra.</li>
+            <li>Ideal para ver Champions, Liga MX, NFL y peleas.</li>
+            <li>Comida potente para mesa compartida o juego largo.</li>
+            <li>Servicio rápido para que no te pierdas una jugada.</li>
           </ul>
-          <span class="badge">Promoción reportada: horario extendido fines de semana</span>
+          <div class="branches">
+            <div class="branch">
+              <h4>Costa Azul</h4>
+              <p>Plaza Pabellón Costera · Av. Costera Miguel Alemán 3124</p>
+              <p>Tel: 744 159 8378</p>
+            </div>
+            <div class="branch">
+              <h4>Colosio</h4>
+              <p>C. Simón Bolívar #29 · Unidad Hab. Luis Donaldo Colosio</p>
+              <p>Sucursal activa en Acapulco</p>
+            </div>
+          </div>
         </article>
 
         <aside class="order">
-          <h3>Pide en minutos</h3>
-          <p>Déjanos tus datos y te contactamos para confirmar tu orden.</p>
+          <h3>Haz tu pedido en minutos</h3>
+          <p>Escribe qué quieres y te confirmamos por WhatsApp.</p>
           <a class="btn btn-main" href="https://wa.me/527441598378" target="_blank" rel="noopener">Abrir WhatsApp</a>
-          <form class="form" id="leadForm">
+          <form class="form" id="leadForm" style="margin-top:10px">
             <input name="nombre" placeholder="Nombre" required>
             <input name="telefono" placeholder="Teléfono" required>
-            <textarea name="mensaje" placeholder="¿Qué vas a pedir hoy?" required></textarea>
+            <textarea name="mensaje" placeholder="¿Qué se te antojó hoy?" required></textarea>
             <button type="submit">Enviar solicitud</button>
             <div id="formStatus"></div>
           </form>
         </aside>
       </div>
-    </section>
 
-    <section>
-      <div class="wrap location">
-        <article class="panel">
-          <h2 class="title">Ubicación</h2>
-          <p><strong>Sucursal principal:</strong> Plaza Pabellón Costera, Av. Costera Miguel Alemán 3124, Fracc. Costa Azul, Acapulco.</p>
-          <p><strong>Teléfono:</strong> 744 159 8378</p>
-          <p><strong>Horario referencial:</strong> 2:00 p.m. a 11:00 p.m. (fines con horario extendido).</p>
-          <a class="btn btn-main" href="https://wa.me/527441598378" target="_blank" rel="noopener">Contactar</a>
-        </article>
-        <div class="map-wrap"><iframe loading="lazy" src="https://maps.google.com/maps?q=Av%20Costera%20Miguel%20Alem%C3%A1n%203124%20Acapulco&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe></div>
+      <div class="wrap map-wrap">
+        <iframe loading="lazy" src="https://maps.google.com/maps?q=Av%20Costera%20Miguel%20Alem%C3%A1n%203124%20Acapulco&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
       </div>
     </section>
   </main>
 
-  <footer>Salads & Wings Acapulco · Sports bar experience</footer>
+  <footer>Salads & Wings Acapulco · Sports bar sin poses</footer>
 
   <script>
     const form = document.getElementById('leadForm');
