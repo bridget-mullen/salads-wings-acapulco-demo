@@ -4,177 +4,156 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Salads & Wings Acapulco | Sports Bar</title>
-  <meta name="description" content="Salads & Wings Acapulco: alitas, barra, fútbol en vivo y pedidos por WhatsApp." />
-  <meta name="theme-color" content="#0b2a7a" />
+  <meta name="description" content="Salads & Wings Acapulco: alitas, chelas, partidos en vivo y barra. Pide por WhatsApp y ubica la sucursal más cercana." />
+  <meta name="theme-color" content="#0f3aa9" />
   <style>
     :root{
-      --blue:#0b2a7a;
-      --blue-2:#173f9f;
-      --red:#c5142c;
-      --red-2:#ef243f;
-      --bg:#0b0e15;
-      --panel:#111827;
-      --panel-2:#161f33;
-      --line:#273555;
-      --text:#e8eefc;
-      --muted:#afbbd9;
-      --max:1240px;
-      --r:14px;
+      --blue:#0f3aa9; --blue2:#1e56d8; --red:#cb1931; --red2:#ef2a45;
+      --bg:#0a0d14; --surface:#101626; --surface2:#151e33; --line:#2b3b60;
+      --text:#ecf1ff; --muted:#aab6d4; --max:1240px;
     }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif}
+    *{box-sizing:border-box} html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif}
     .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
 
-    /* NEW LAYOUT: top nav + split hero with side card */
-    header{position:sticky;top:0;z-index:20;background:rgba(9,12,19,.9);backdrop-filter:blur(8px);border-bottom:1px solid #1f2a44}
-    .nav{height:68px;display:flex;align-items:center;justify-content:space-between}
-    .logo{font-weight:900;letter-spacing:.04em}
-    .logo span{color:#ff8090}
-    .nav a{color:#cbd7f4;text-decoration:none;margin-left:18px;font-weight:700;font-size:.92rem}
+    .topbar{position:sticky;top:0;z-index:30;background:rgba(8,12,20,.9);border-bottom:1px solid #223357;backdrop-filter:blur(8px)}
+    .topbar .row{height:66px;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+    .brand span{color:#ff8f9d}
+    .topbar nav a{color:#ced8f3;text-decoration:none;margin-left:16px;font-size:.9rem;font-weight:700}
 
-    .hero{padding:34px 0 26px;background:radial-gradient(circle at 85% 5%, rgba(197,20,44,.22), transparent 35%)}
-    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
-    .hero-main{min-height:460px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;position:relative}
-    .hero-main:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(9,16,33,.92),rgba(9,16,33,.45) 55%,rgba(197,20,44,.3));z-index:1}
-    .hero-main img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    .hero-content{position:relative;z-index:2;padding:34px 30px;max-width:760px}
-    .kicker{display:inline-block;font-size:.76rem;text-transform:uppercase;letter-spacing:.09em;border:1px solid rgba(255,255,255,.4);padding:7px 10px;border-radius:999px}
-    h1{margin:14px 0 10px;font-size:clamp(2rem,4.8vw,4.2rem);line-height:.92;text-transform:uppercase}
-    h1 span{color:#ff9ca9}
-    .hero-content p{color:#dde6ff;max-width:560px}
-    .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;font-weight:800;text-decoration:none;border:2px solid transparent;transition:.2s}
-    .btn-main{background:linear-gradient(90deg,var(--red),var(--red-2));color:#fff;border-color:var(--red)}
-    .btn-alt{border-color:#4a5f90;color:#d7e2ff}
+    .hero{padding:18px 0 0}
+    .hero-shell{border:1px solid var(--line);background:var(--surface);overflow:hidden;display:grid;grid-template-columns:1.15fr .85fr}
+    .hero-copy{padding:36px 30px;background:linear-gradient(125deg,rgba(15,58,169,.22),rgba(0,0,0,.18));position:relative}
+    .hero-copy:before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,var(--blue2),var(--red2))}
+    .kicker{display:inline-block;padding:7px 10px;border:1px solid #415d98;font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;font-weight:800;color:#d8e3ff}
+    h1{margin:14px 0 10px;font-size:clamp(2rem,5vw,4.8rem);line-height:.9;text-transform:uppercase}
+    h1 span{color:#ff9aa8}
+    .hero-copy p{max-width:580px;color:#d2dcf8}
+    .cta{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:800;border:2px solid transparent;transition:.2s}
+    .btn-main{background:linear-gradient(90deg,var(--red),var(--red2));color:#fff;border-color:var(--red)}
+    .btn-alt{border-color:#46619b;color:#d9e5ff}
 
-    .hero-side{display:grid;gap:12px}
-    .quick{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px}
-    .quick h3{margin:0 0 8px;font-size:.95rem;text-transform:uppercase;color:#ff9dac;letter-spacing:.04em}
-    .quick p{margin:0;color:#c0ccea;font-size:.93rem}
+    .hero-media{min-height:460px;position:relative}
+    .hero-media img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(1.05) contrast(1.02)}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,10,17,.9),rgba(6,10,17,.15));display:flex;align-items:flex-end;padding:18px}
+    .hero-pill{background:rgba(13,19,34,.78);border:1px solid #35508a;padding:10px 12px;color:#d5e2ff;font-weight:700;font-size:.88rem}
 
-    section{padding:34px 0}
-    .section-title{font-size:1.8rem;text-transform:uppercase;margin:0 0 6px}
-    .section-sub{margin:0 0 16px;color:var(--muted)}
+    .ticker{background:#0f1526;border-top:1px solid #24365d;border-bottom:1px solid #24365d;overflow:hidden}
+    .ticker .track{display:flex;gap:28px;white-space:nowrap;padding:10px 0;font-weight:800;text-transform:uppercase;font-size:.82rem;color:#d0dcff}
 
-    /* different content structure: horizontal category rails */
-    .rail{display:grid;gap:12px}
-    .row{display:grid;grid-template-columns:220px 1fr;gap:12px;align-items:stretch}
-    .row-label{background:linear-gradient(160deg,#121c34,#1b2a4a);border:1px solid #30456f;border-radius:12px;padding:14px}
-    .row-label h4{margin:0;text-transform:uppercase;color:#ff9dae;font-size:1rem}
-    .row-label p{margin:6px 0 0;color:#b6c4e5;font-size:.88rem}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .card{background:var(--panel-2);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-    .card img{width:100%;height:130px;object-fit:cover;display:block}
-    .card-b{padding:10px}
-    .card-b b{display:block;color:#ffd2d8;text-transform:uppercase;font-size:.86rem}
-    .card-b p{margin:6px 0 0;color:#b7c3df;font-size:.86rem}
+    section{padding:42px 0}
+    .title{margin:0 0 6px;font-size:1.9rem;text-transform:uppercase}
+    .title .a{color:#ff99a6}
+    .sub{margin:0 0 14px;color:var(--muted)}
 
-    .mid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
-    .panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
-    .panel h3{margin:0 0 8px;text-transform:uppercase}
-    .panel ul{margin:8px 0 0;padding-left:18px;color:#c6d2eb}
-    .panel li{margin:7px 0}
+    .menu-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .dish{background:var(--surface2);border:1px solid var(--line);overflow:hidden}
+    .dish img{width:100%;height:145px;object-fit:cover;display:block}
+    .dish .b{padding:10px}
+    .dish h3{margin:0 0 4px;text-transform:uppercase;font-size:.95rem}
+    .dish p{margin:0;color:#b7c4e3;font-size:.86rem}
 
-    .order{background:linear-gradient(160deg,#121a2f,#0f1526);border:1px solid #324b7e;border-radius:12px;padding:16px}
-    .order p{margin:0 0 10px;color:#ccd8f4}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .card{background:var(--surface);border:1px solid var(--line);padding:16px}
+    .card h3{margin:0 0 8px;text-transform:uppercase}
+    .card ul{margin:8px 0 0;padding-left:18px}
+    .card li{margin:7px 0;color:#c7d3ef}
+
+    .branch-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+    .branch{background:#0d1425;border:1px solid #314976;padding:10px}
+    .branch strong{display:block;color:#ff9dab;text-transform:uppercase;font-size:.82rem;margin-bottom:4px}
+    .branch span{color:#cad6f2;font-size:.88rem}
+
+    .order{background:linear-gradient(170deg,#121a2e,#0e1422);border:1px solid #355086;padding:16px}
+    .order p{margin:0 0 10px;color:#d3def8}
     .form{display:grid;gap:9px}
-    .form input,.form textarea{width:100%;padding:11px;border-radius:10px;border:1px solid #3a4f80;background:#0d1322;color:#fff}
-    .form button{padding:12px;border:0;border-radius:10px;background:linear-gradient(90deg,var(--red),var(--red-2));color:#fff;font-weight:800;cursor:pointer}
-    #formStatus{font-size:.88rem;color:#ffb8c2}
+    .form input,.form textarea{width:100%;padding:10px;border:1px solid #385084;background:#0d1423;color:#fff}
+    .form button{padding:12px;border:0;background:linear-gradient(90deg,var(--red),var(--red2));color:#fff;font-weight:800;cursor:pointer}
+    #formStatus{font-size:.88rem;color:#ffb1bd}
 
-    .map{margin-top:12px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
-    iframe{width:100%;height:300px;border:0}
+    .map{margin-top:12px;border:1px solid var(--line)}
+    iframe{width:100%;height:310px;border:0}
 
-    footer{margin-top:24px;padding:18px 0 26px;background:#090d16;color:#8f9bbb;text-align:center;font-size:.88rem}
+    footer{margin-top:20px;background:#080c14;color:#8997bb;text-align:center;padding:18px 0 24px;font-size:.88rem}
 
     @media (max-width:1000px){
-      .hero-grid,.mid{grid-template-columns:1fr}
-      .row{grid-template-columns:1fr}
-      .cards{grid-template-columns:1fr 1fr}
+      .hero-shell,.split{grid-template-columns:1fr}
+      .menu-grid{grid-template-columns:repeat(2,1fr)}
     }
     @media (max-width:640px){
-      .cards{grid-template-columns:1fr}
-      .nav a{display:none}
+      .menu-grid,.branch-grid{grid-template-columns:1fr}
+      .topbar nav a{display:none}
+      .hero-media{min-height:300px}
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap nav">
-      <div class="logo">SALADS <span>&</span> WINGS</div>
+  <div class="topbar">
+    <div class="wrap row">
+      <div class="brand">Salads <span>&</span> Wings</div>
       <nav>
         <a href="#menu">Menú</a>
         <a href="#sucursales">Sucursales</a>
         <a href="#pedido">Pedido</a>
       </nav>
     </div>
-  </header>
+  </div>
 
   <section class="hero">
-    <div class="wrap hero-grid">
-      <article class="hero-main">
-        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2200&q=80" alt="Sports bar y cerveza">
-        <div class="hero-content">
-          <span class="kicker">Acapulco · Sports Bar</span>
-          <h1>Fútbol, tarro y <span>alitas sin piedad</span></h1>
-          <p>Aquí no vienes a picar. Vienes a comer cabrón, ver el partido completo y cerrar la noche con barra encendida.</p>
-          <div class="hero-actions">
-            <a class="btn btn-main" href="https://wa.me/527441598378" target="_blank" rel="noopener">Pedir por WhatsApp</a>
-            <a class="btn btn-alt" href="#menu">Explorar menú</a>
-          </div>
+    <div class="wrap hero-shell">
+      <article class="hero-copy">
+        <span class="kicker">Acapulco · Sports Bar</span>
+        <h1>Fútbol, tarro y <span>alitas de verdad</span></h1>
+        <p>Aquí se viene a ver el partido completo, pedir fuerte y brindar con la mesa llena. Sin poses. Solo buena comida, barra y juego.</p>
+        <div class="cta">
+          <a class="btn btn-main" href="https://wa.me/527441598378" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          <a class="btn btn-alt" href="#menu">Explorar menú</a>
         </div>
       </article>
-
-      <aside class="hero-side">
-        <div class="quick"><h3>Partidos en vivo</h3><p>Pantallas activas para jornadas fuertes: Liga MX, Champions, NFL y más.</p></div>
-        <div class="quick"><h3>Barra</h3><p>Chelas frías, tarros y ambiente para quedarte más de una ronda.</p></div>
-        <div class="quick"><h3>Cocina</h3><p>Alitas, tacos, burgers, entradas y opciones para mesa completa.</p></div>
-      </aside>
+      <article class="hero-media">
+        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=1800&q=80" alt="Barra sports bar cerveza">
+        <div class="hero-overlay"><div class="hero-pill">Partidos en vivo · Barra activa · Sabor de juego largo</div></div>
+      </article>
     </div>
   </section>
 
+  <div class="ticker"><div class="wrap track">
+    <span>Wings & Boneless</span><span>•</span><span>Burgers</span><span>•</span><span>Tacos</span><span>•</span><span>Tarros fríos</span><span>•</span><span>Ambiente de partido</span>
+  </div></div>
+
   <section id="menu">
     <div class="wrap">
-      <h2 class="section-title">Menú de batalla</h2>
-      <p class="section-sub">Comida para ver el juego completo, no para salir con hambre.</p>
-
-      <div class="rail">
-        <div class="row">
-          <div class="row-label"><h4>Wings</h4><p>Salsas intensas y porciones de juego largo.</p></div>
-          <div class="cards">
-            <article class="card"><img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=900&q=80" alt="Alitas"><div class="card-b"><b>Mango Habanero</b><p>Picante-dulce para arrancar fuerte.</p></div></article>
-            <article class="card"><img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?auto=format&fit=crop&w=900&q=80" alt="Boneless"><div class="card-b"><b>Boneless clásicos</b><p>Crujientes, jugosos y directos al punto.</p></div></article>
-            <article class="card"><img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=900&q=80" alt="Entradas"><div class="card-b"><b>Entradas para compartir</b><p>Papas, dedos y más para la mesa.</p></div></article>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="row-label"><h4>Power plates</h4><p>Para cuando el hambre viene pesada.</p></div>
-          <div class="cards">
-            <article class="card"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80" alt="Hamburguesa"><div class="card-b"><b>Burger S&W</b><p>Carne a la parrilla con papas.</p></div></article>
-            <article class="card"><img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=900&q=80" alt="Tacos"><div class="card-b"><b>Tacos gobernador</b><p>Sabor de costa con carácter.</p></div></article>
-            <article class="card"><img src="https://images.unsplash.com/photo-1514361892635-6a8f5b8f4c7b?auto=format&fit=crop&w=900&q=80" alt="Cerveza"><div class="card-b"><b>Barra & beer</b><p>Tarro frío para cada jugada.</p></div></article>
-          </div>
-        </div>
+      <h2 class="title">Menú para <span class="a">día de partido</span></h2>
+      <p class="sub">Lo que pides cuando no te quieres perder ni una jugada.</p>
+      <div class="menu-grid">
+        <article class="dish"><img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=900&q=80" alt="Alitas"><div class="b"><h3>Alitas Mango Habanero</h3><p>Picante-dulce, crujiente y adictivo.</p></div></article>
+        <article class="dish"><img src="https://images.unsplash.com/photo-1608039829572-78524f79c4c7?auto=format&fit=crop&w=900&q=80" alt="Boneless"><div class="b"><h3>Boneless clásicos</h3><p>Para compartir o clavarte solo.</p></div></article>
+        <article class="dish"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80" alt="Hamburguesa"><div class="b"><h3>Hamburguesa S&W</h3><p>Carne, queso y papas de batalla.</p></div></article>
+        <article class="dish"><img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=900&q=80" alt="Tacos"><div class="b"><h3>Tacos Gobernador</h3><p>Sabor de costa con impacto.</p></div></article>
       </div>
     </div>
   </section>
 
   <section id="sucursales">
-    <div class="wrap mid">
-      <article class="panel">
-        <h3>Sucursales en Acapulco</h3>
+    <div class="wrap split">
+      <article class="card">
+        <h3>Varias sucursales en Acapulco</h3>
         <ul>
           <li><strong>Costa Azul:</strong> Plaza Pabellón Costera, Av. Costera Miguel Alemán 3124.</li>
           <li><strong>Colosio:</strong> C. Simón Bolívar #29, Unidad Hab. Luis Donaldo Colosio.</li>
           <li><strong>Contacto principal:</strong> 744 159 8378</li>
-          <li><strong>Horario base:</strong> desde 2:00 p.m. (fines con extensión nocturna).</li>
+          <li><strong>Horario base:</strong> desde 2:00 p.m. (fines con horario extendido).</li>
         </ul>
+        <div class="branch-grid">
+          <div class="branch"><strong>Costa Azul</strong><span>Sports bar + terraza</span></div>
+          <div class="branch"><strong>Colosio</strong><span>Formato urbano de barrio</span></div>
+        </div>
       </article>
 
       <article id="pedido" class="order">
-        <h3>Ordena ya</h3>
-        <p>Manda tu pedido y te confirmamos por WhatsApp en minutos.</p>
+        <h3>Pide ya</h3>
+        <p>Manda tu orden y te la confirmamos por WhatsApp en minutos.</p>
         <a class="btn btn-main" href="https://wa.me/527441598378" target="_blank" rel="noopener">Abrir WhatsApp</a>
         <form class="form" id="leadForm" style="margin-top:10px">
           <input name="nombre" placeholder="Nombre" required>
