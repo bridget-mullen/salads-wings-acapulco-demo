@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Salads & Wings Acapulco | Sports Bar</title>
+  <meta name="description" content="Salads & Wings Acapulco: alitas, burgers, tacos y ambiente sports bar. Menú, ubicación y pedidos por WhatsApp." />
+  <meta name="keywords" content="Salads y Wings Acapulco, alitas Acapulco, sports bar Costa Azul" />
+  <meta property="og:title" content="Salads & Wings Acapulco" />
+  <meta property="og:description" content="Sports bar de alto nivel en Acapulco: sabor, barra, chelas y partidos." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1400&q=80" />
+  <meta name="theme-color" content="#0d2f8b" />
+  <style>
+    :root{
+      --blue:#0d2f8b;
+      --blue-2:#1644be;
+      --red:#d5172e;
+      --red-2:#ff2c44;
+      --ink:#111318;
+      --paper:#f5f7fc;
+      --white:#fff;
+      --line:#c9d3ea;
+      --radius:14px;
+      --max:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{font-family:Inter,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+    .hero{
+      min-height:82vh;
+      color:#fff;
+      display:flex;align-items:flex-end;
+      background:
+        linear-gradient(120deg,rgba(8,18,46,.88),rgba(8,18,46,.45) 56%,rgba(213,23,46,.3)),
+        url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=2200&q=80') center/cover no-repeat;
+      border-bottom:5px solid var(--red);
+    }
+    .hero-inner{padding:72px 0 58px}
+    .kicker{display:flex;align-items:center;gap:10px;text-transform:uppercase;letter-spacing:.09em;font-weight:800;font-size:.78rem;color:#ffdbe0}
+    .kicker:before{content:"";width:48px;height:3px;background:var(--red-2)}
+    h1{margin:14px 0 10px;font-size:clamp(2.2rem,6vw,5rem);line-height:.95;text-transform:uppercase;font-weight:900;max-width:900px}
+    h1 span{color:#ff8d9b}
+    .hero p{max-width:720px;margin:0;color:#e3e9ff;font-size:1.04rem}
+    .cta{margin-top:24px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;text-decoration:none;font-weight:800;border-radius:999px;border:2px solid transparent;transition:.2s}
+    .btn-main{background:linear-gradient(90deg,var(--red),var(--red-2));border-color:var(--red);color:#fff}
+    .btn-main:hover{filter:brightness(.95)}
+    .btn-alt{border-color:rgba(255,255,255,.5);color:#fff}
+    .btn-alt:hover{background:rgba(255,255,255,.08)}
+
+    .bar{background:#0b1636;color:#fff;border-top:1px solid #253a72;border-bottom:1px solid #253a72}
+    .bar-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+    .bar-item{padding:14px 10px;text-align:center;border-right:1px solid #253a72;font-weight:700;font-size:.9rem}
+    .bar-item:last-child{border-right:0}
+
+    section{padding:54px 0}
+    .title{margin:0 0 8px;font-size:2rem;text-transform:uppercase;letter-spacing:.02em}
+    .title .a{color:var(--red)}
+    .sub{margin:0 0 18px;color:#56607a}
+
+    .menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:14px}
+    .item{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 20px rgba(9,23,58,.08)}
+    .item img{width:100%;height:160px;object-fit:cover;display:block}
+    .item-b{padding:12px}
+    .item h3{margin:0 0 4px;text-transform:uppercase;font-size:1rem}
+    .price{font-weight:900;color:var(--red)}
+    .item p{margin:6px 0 0;color:#5a657f;font-size:.92rem}
+
+    .experience{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .panel{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+    .panel ul{margin:8px 0 0;padding-left:18px}
+    .panel li{margin:8px 0}
+
+    .order{background:#111b36;color:#fff;border:1px solid #2f477c;border-radius:var(--radius);padding:20px;position:relative;overflow:hidden}
+    .order:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 90% 10%, rgba(213,23,46,.35), transparent 40%);pointer-events:none}
+    .order h3{margin:0 0 8px;text-transform:uppercase;font-size:1.45rem;position:relative}
+    .order p{margin:0 0 14px;color:#dde6ff;position:relative}
+    .form{display:grid;gap:10px;position:relative}
+    .form input,.form textarea{width:100%;padding:11px;border:1px solid #3a4f82;background:#0f1830;color:#fff;border-radius:11px}
+    .form button{padding:12px;border:0;background:linear-gradient(90deg,var(--red),var(--red-2));color:#fff;font-weight:800;border-radius:11px;cursor:pointer}
+    #formStatus{font-size:.9rem;color:#ff9caa}
+
+    .location{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .map-wrap{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+    iframe{width:100%;height:320px;border:0}
+    .badge{display:inline-block;background:#0b1636;color:#fff;border:1px solid #223a70;border-radius:999px;padding:6px 10px;font-size:.78rem;font-weight:800;margin-top:8px}
+
+    footer{background:#0c1224;color:#9aa5c4;text-align:center;padding:22px 0 30px;font-size:.9rem;margin-top:24px}
+
+    @media (max-width:980px){
+      .bar-grid{grid-template-columns:repeat(2,1fr)}
+      .bar-item:nth-child(2){border-right:0}.bar-item:nth-child(-n+2){border-bottom:1px solid #253a72}
+      .experience,.location{grid-template-columns:1fr}
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Restaurant",
+    "name":"Salads & Wings Terraza",
+    "servesCuisine":"Alitas, Sports Bar, Americana",
+    "address":{"@type":"PostalAddress","streetAddress":"Av. Costera Miguel Alemán 3124, Plaza Pabellón Costera","addressLocality":"Acapulco de Juárez","addressRegion":"Guerrero","postalCode":"39850","addressCountry":"MX"},
+    "telephone":"+52 744 159 8378"
+  }
+  </script>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <div class="kicker">Salads & Wings · Costa Azul</div>
+      <h1>Sports bar con <span>hambre de juego</span></h1>
+      <p>Alitas, tacos, burgers, chelas frías y pantalla encendida. El spot para comer bien, ver el partido y quedarte más tiempo del que pensabas.</p>
+      <div class="cta">
+        <a class="btn btn-main" href="https://wa.me/527441598378" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+        <a class="btn btn-alt" href="#menu">Ver menú</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="bar">
+    <div class="wrap bar-grid">
+      <div class="bar-item">Wings & Boneless</div>
+      <div class="bar-item">Barra y cerveza</div>
+      <div class="bar-item">Partidos en vivo</div>
+      <div class="bar-item">Ambiente Costa Azul</div>
+    </div>
+  </div>
+
+  <main>
+    <section id="menu">
+      <div class="wrap">
+        <h2 class="title">Menú <span class="a">destacado</span></h2>
+        <p class="sub">Sabor intenso, porciones de batalla y combos para compartir.</p>
+        <div class="menu">
+          <article class="item"><img src="https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=900&q=80" alt="Alitas"><div class="item-b"><h3>Alitas Mango Habanero</h3><div class="price">Top seller</div><p>Alitas crujientes con salsa picante-dulce de la casa.</p></div></article>
+          <article class="item"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=80" alt="Hamburguesa"><div class="item-b"><h3>Hamburguesa S&W</h3><div class="price">Especialidad</div><p>Carne a la parrilla, queso y papas para juego largo.</p></div></article>
+          <article class="item"><img src="https://images.unsplash.com/photo-1626700051175-6818013e1d4f?auto=format&fit=crop&w=900&q=80" alt="Tacos"><div class="item-b"><h3>Tacos Gobernador</h3><div class="price">Favorito local</div><p>Camarón, queso y sabor de costa en cada mordida.</p></div></article>
+          <article class="item"><img src="https://images.unsplash.com/photo-1514361892635-6a8f5b8f4c7b?auto=format&fit=crop&w=900&q=80" alt="Cerveza y barra"><div class="item-b"><h3>Barra & Beer</h3><div class="price">Mood sports bar</div><p>Cervezas frías y ambiente para ver el partido completo.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap experience">
+        <article class="panel">
+          <h2 class="title">La vibra del <span class="a">lugar</span></h2>
+          <p>Salads & Wings combina cocina casual potente con atmósfera de sports bar real: pantallas, barra activa y mesas para compartir cada jugada.</p>
+          <ul>
+            <li>Ideal para ver partidos con buena comida y mejor ambiente.</li>
+            <li>Carta enfocada en alitas, entradas, tacos, burgers y ensaladas.</li>
+            <li>Experiencia social, directa y con alta recompra.</li>
+          </ul>
+          <span class="badge">Promoción reportada: horario extendido fines de semana</span>
+        </article>
+
+        <aside class="order">
+          <h3>Pide en minutos</h3>
+          <p>Déjanos tus datos y te contactamos para confirmar tu orden.</p>
+          <a class="btn btn-main" href="https://wa.me/527441598378" target="_blank" rel="noopener">Abrir WhatsApp</a>
+          <form class="form" id="leadForm">
+            <input name="nombre" placeholder="Nombre" required>
+            <input name="telefono" placeholder="Teléfono" required>
+            <textarea name="mensaje" placeholder="¿Qué vas a pedir hoy?" required></textarea>
+            <button type="submit">Enviar solicitud</button>
+            <div id="formStatus"></div>
+          </form>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap location">
+        <article class="panel">
+          <h2 class="title">Ubicación</h2>
+          <p><strong>Sucursal principal:</strong> Plaza Pabellón Costera, Av. Costera Miguel Alemán 3124, Fracc. Costa Azul, Acapulco.</p>
+          <p><strong>Teléfono:</strong> 744 159 8378</p>
+          <p><strong>Horario referencial:</strong> 2:00 p.m. a 11:00 p.m. (fines con horario extendido).</p>
+          <a class="btn btn-main" href="https://wa.me/527441598378" target="_blank" rel="noopener">Contactar</a>
+        </article>
+        <div class="map-wrap"><iframe loading="lazy" src="https://maps.google.com/maps?q=Av%20Costera%20Miguel%20Alem%C3%A1n%203124%20Acapulco&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Salads & Wings Acapulco · Sports bar experience</footer>
+
+  <script>
+    const form = document.getElementById('leadForm');
+    const status = document.getElementById('formStatus');
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.textContent = 'Enviando...';
+      const payload = Object.fromEntries(new FormData(form).entries());
+      try {
+        const res = await fetch('/api/reserva', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+        const data = await res.json();
+        if (!res.ok) throw new Error(data.error || 'Error');
+        status.textContent = '¡Listo! Te contactamos por WhatsApp.';
+        form.reset();
+      } catch {
+        status.textContent = 'No se pudo enviar. Escríbenos directo por WhatsApp.';
+      }
+    });
+  </script>
+</body>
+</html>
